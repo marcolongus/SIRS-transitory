@@ -53,7 +53,7 @@ int main(void) {
 	/* SIMULACION */
 	gen.seed(seed);
 
-	for (size_t L_sim = 140; L_sim < 220; L_sim += 20) {
+	for (size_t L_sim = 220; L_sim < 221; L_sim += 20) {
 		// Se the system size
 		L = L_sim;
 		// Convert float variables to strings
@@ -94,7 +94,7 @@ int main(void) {
 			int time_step = 0;
 			KIND i_max = 0, t_max = 0;
 			//state_vector[1] < N
-			while (time_step < 2000000 / 40) {
+			while (time_step < 2000000 / 20) {
 				CHECK(time_step, (int)2e01) print_epidemic_tofile(epidemic, state_vector, time_step);
 				CHECK(time_step, (int)2e04) printf("Time: %0.f\n", TIME(time_step, delta_time));
 				
