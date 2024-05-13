@@ -8,8 +8,8 @@ import matplotlib.pyplot as plt
 # =====================================#
 # time_step = 1250
 # time_step = 30 * 1250
-x_grid_size = 30
-y_grid_size = 15
+x_grid_size = 20
+y_grid_size = 20
 
 # =====================================#
 # FUNCTION
@@ -74,13 +74,13 @@ def build_heatmap(L: int):
 	y_tick_positions = np.linspace(0, heatmap.shape[1], 5) 
 	y_tick_labels = y_tick_positions * y_grid_size 
 	y_tick_labels_formated = ["{:d}".format(int(y)) for y in y_tick_labels]
-	plt.yticks(y_tick_positions, y_tick_labels_formated)
+	plt.yticks(y_tick_positions, y_tick_labels_formated, fontsize=15)
 
 	# Calculate the y-axis tick positions and labels
 	x_tick_positions = np.linspace(0, heatmap.shape[0], 5)
 	x_tick_labels = x_tick_positions * x_grid_size
 	x_tick_labels_formated = [f"{int(x): d}" for x in x_tick_labels]
-	plt.xticks(x_tick_positions, x_tick_labels_formated)
+	plt.xticks(x_tick_positions, x_tick_labels_formated, fontsize=15)
 
 	# plt.show()
 
@@ -96,12 +96,13 @@ def build_heatmap(L: int):
 		label=f"meanfield ballistic-{L}",
 	)
 	plt.legend()
+	plt.tight_layout()
 	#plt.axis("square")
 
-L_list = [100, 120, 140, 160, 180, 200, 220]
+L_list = [100, 120, 140, 160, 180, 200]
 for L in L_list:
 	build_heatmap(L)
 	#plt.savefig("figures/heatmap_L.eps")
-	#plt.savefig("figures/heatmap_L.pdf")
+	plt.savefig(f"figures/heatmap_{L}.pdf")
 	plt.savefig(f"figures/heatmap_{L}.png")
 	plt.show()
