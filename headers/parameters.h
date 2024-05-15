@@ -28,7 +28,7 @@ const KIND  tau_t = 1  , p_transmision = (1/tau_t) * delta_time, //sane---->infe
 			tau_i = 200, p_infection   = (1/tau_i) * delta_time, //infected--->refractary
 			tau_r = 500, p_recfractary = (1/tau_r) * delta_time; //refractary--->sane
 
-const KIND alpha = 100, p_rotation    = (1 / alpha) * delta_time; // tumbling rates angle_1 -> angle_2
+const KIND alpha = 10, p_rotation    = (1 / alpha) * delta_time; // tumbling rates angle_1 -> angle_2
 
 
  /* Para distribución power-law hay que fitear las constantes */

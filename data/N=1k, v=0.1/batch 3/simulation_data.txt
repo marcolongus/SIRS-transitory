@@ -1,9 +1,0 @@
-L             = 100
-N             = 1024
-dt            = 0.05
-active_vel    = 0.1
-Vel Distribut = -1
-tau Rotation  = 100
-tau_t         = 1
-tau_i         = 200
-tau_r         = 500

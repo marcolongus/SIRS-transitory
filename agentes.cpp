@@ -53,7 +53,7 @@ int main(void) {
 	/* SIMULACION */
 	gen.seed(seed);
 
-	for (size_t L_sim = 220; L_sim < 221; L_sim += 20) {
+	for (size_t L_sim = 80; L_sim < 221; L_sim += 20) {
 		// Se the system size
 		L = L_sim;
 		// Convert float variables to strings
